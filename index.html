@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS Config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -51,9 +51,8 @@
         }
     </script>
 
-    <!-- Three.js -->
+    <!-- Three.js & Markdown Parser -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Marked.js for Markdown parsing in chat -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <style>
@@ -153,7 +152,6 @@
     <!-- ThreeJS Background Canvas -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Scroll-Linked Pill Navbar -->
     <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[92%] md:w-[80%] max-w-5xl">
         <div id="nav-pill" class="glass-pill rounded-full px-6 py-4 flex items-center justify-between transition-all duration-300">
             <!-- Logo -->
@@ -185,7 +183,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="pt-40 pb-20 px-6 relative z-10 flex flex-col items-center justify-center text-center">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-accent1/30 bg-brand-accent1/10 text-brand-accent2 text-xs font-semibold tracking-wider mb-6 animate-pulse-slow">
             <span class="w-2 h-2 rounded-full bg-brand-accent1"></span>
@@ -200,7 +197,6 @@
         </p>
     </header>
 
-    <!-- Content Grid -->
     <main class="max-w-7xl mx-auto px-6 pb-32 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
@@ -218,11 +214,11 @@
                 </div>
             </article>
 
-            <!-- Card 1 -->
+            <!-- Card 1 (Icon bug resolved: updated fa-chart-line-down to fa-arrow-trend-down) -->
             <article class="glass-card rounded-2xl p-6 flex flex-col relative overflow-hidden group cursor-pointer" onclick="openModal(1)">
                 <div class="absolute top-0 left-0 w-1 h-full bg-brand-accent1 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div class="w-10 h-10 rounded-lg bg-brand-bg2 border border-brand-border flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-chart-line-down text-brand-accent1"></i>
+                    <i class="fa-solid fa-arrow-trend-down text-brand-accent1"></i>
                 </div>
                 <h3 id="card-1-title" class="text-xl font-bold mb-3 text-brand-text1 group-hover:text-brand-accent2 transition-colors">Wall Street Tech Pullback</h3>
                 <p id="card-1-desc" class="text-brand-text2 text-sm leading-relaxed mb-4">Broadcom and CrowdStrike fall as market expectations outpace current shipments. Concurrently, CrowdStrike announces a 4-for-1 stock split.</p>
@@ -343,7 +339,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-white/10 bg-brand-bg1 py-12 relative z-10">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex flex-col items-center md:items-start gap-2">
@@ -367,7 +362,6 @@
         </div>
     </footer>
 
-    <!-- Blurred News Details Modal -->
     <div id="news-modal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 opacity-0 invisible">
         <!-- Backdrop -->
         <div class="absolute inset-0 bg-black/60 backdrop-blur-md" id="modal-backdrop" onclick="closeModal()"></div>
@@ -413,7 +407,6 @@
         <img src="ChatGPT Image May 15, 2026, 07_04_43 PM.png" alt="AI Toggle" class="w-full h-full object-cover rounded-full" onerror="this.style.display='none'">
     </button>
 
-    <!-- Chat Widget Window -->
     <div id="chat-widget" class="fixed bottom-24 right-6 w-80 md:w-96 h-[500px] glass-pill rounded-2xl flex flex-col shadow-2xl z-50 overflow-hidden border-brand-accent1/30">
         <!-- Chat Header -->
         <div class="px-5 py-4 border-b border-white/10 bg-brand-bg2/50 flex justify-between items-center">
@@ -450,7 +443,6 @@
         </div>
     </div>
 
-    <!-- Core Scripts & Massive Translation Dictionary -->
     <script>
         // --- 1. Massive Localization Dictionary with Rich Detail HTML ---
         const translations = {
@@ -491,7 +483,7 @@
                     { title: "कक्षीय एआई बुनियादी ढांचा", desc: "स्पेसएक्स के S-1 दस्तावेज से $75B आईपीओ योजना के पता चलल बा, जवन एकरा के अंतरिक्ष में डेटा सेंटर बनावे वाली एआई कंपनी के रूप में स्थापित करी।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>आईपीओ डेटा:</strong><p>स्पेसएक्स $135 प्रति शेयर के भाव पर $75 बिलियन जुटावे खातिर आईपीओ फाइल कइले बा। संप्रभु फंड्स के सामने एकरा के 'कक्षीय एआई' कंपनी के रूप में पेश कइल जा रहल बा जवन धरती के बिजली संकट से अलग अंतरिक्ष में डेटा सेंटर चलाई।</p></div>", cat: "बुनियादी ढांचा आ पूंजी" },
                     { title: "शेयर बाजार में गिरावट", desc: "ब्रॉडकॉम आ क्राउडस्ट्राइक के शेयर में गिरावट दर्ज भइल बा काहे कि बाजार के उम्मीद उत्पाद के रफ़्तार से बहुत आगे निकल गइल रहे।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>मार्केट सुधार:</strong><p>ब्रॉडकॉम के शेयर 13% आ क्राउडस्ट्राइक के 4% गिरल बा। इसके साथ ही, क्राउडस्ट्राइक ने अपनी पहुंच बढ़ावे खातिर 4-फॉर-1 स्टॉक स्प्लिट के एलान कइले बा।</p></div>", cat: "बाजार आ इक्विटी" },
                     { title: "कॉर्टेक्स में क्लॉड एआई", desc: "स्नोफ्लेक ने एंथ्रोपिक के साथे मिल के क्लॉड के सीधे कॉर्टेक्स एआई में शामिल कइले बा, जवना से सुरक्षित व्यापारिक डेटा के विश्लेषण आसान होई।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>कॉर्टेक्स इंटीग्रेशन:</strong><p>स्नोफ्लेक समिट '26 में घोषित ई कदम एआई के सीधे सुरक्षित रिलेशनल डेटा पर काम करे के अनुमति देला। ब्लॉक आ नोशन जइसन कंपनियन इसका उपयोग ऑटोमेशन खातिर कर रहल बाड़ी स।</p></div>", cat: "एंटरप्राइज एआई" },
-                    { title: "एआई अपनावे में भारत सबसे आगे", desc: "बीसीजी (BCG) के नया सूचकांक के अनुसार, भारत कार्यस्थल पर एआई को अपनावे में दुनिया में सबसे आगे बा, जहवां 70% कर्मचारी हर हफ्ता एक दिन बचावेले।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>ग्लोबल बूम:</strong><p>भारत में करीब 70% डिजिटल कर्मचारियन के कहनाम बा कि एआई टूल के मदद से ऊ लोग हर हफ्ता औसतन एक पूरा कामकाजी दिन बचावेला, जवन अमेरिका आ यूरोप से बहुत बेसी बा।</p></div>", cat: "एडॉप्शन डायनेमिक्स" },
+                    { title: "एआई अपनावे में भारत सबसे आगे", desc: "बीसीजी (BCG) के नया सूचкаंक के अनुसार, भारत कार्यस्थल पर एआई को अपनावे में दुनिया में सबसे आगे बा, जहवां 70% कर्मचारी हर हफ्ता एक दिन बचावेले।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>ग्लोबल बूम:</strong><p>भारत में करीब 70% डिजिटल कर्मचारियन के कहनाम बा कि एआई टूल के मदद से ऊ लोग हर हफ्ता औसतन एक पूरा कामकाजी दिन बचावेला, जवन अमेरिका आ यूरोप से बहुत बेसी बा।</p></div>", cat: "एडॉプション डायनेमिक्स" },
                     { title: "बैक-बटन स्पैम पर गूगल के एक्शन", desc: "गूगल ने सर्च सुधार खातिर नया अपडेट जारी कइले बा, जवना के तहत वापस जाए से रोके वाला भ्रामक लैंडिंग पेजों पर कड़ा जुर्माना लगावल जाई।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>सर्च सुरक्षा:</strong><p>जून के बीच से, जवन वेबसाइट यूज़र्स के वापस जाए से रोके खातिर जावास्क्रिप्ट के इस्तेमाल करी, ओकर सर्च रैंकिंग बहुत नीचे गिरा दिहल जाई।</p></div>", cat: "सर्च सुरक्षा" },
                     { title: "बीवाईडी एटो 3 फेसलिफ्ट लॉन्च", desc: "बीवाईडी के नया गाड़ी ई-प्लेटफॉर्म 3.0 पर आधारित बा, जवना में रियर-व्हील ड्राइव (RWD) आ मात्र 9 मिनट में 0 से 97% चार्जिंग क्षमता बा।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नया इलेक्ट्रिक कार:</strong><p>BYD एटो 3 में फ्रंट-व्हील के जगह रियर-व्हील ड्राइव दिहल गइल बा। ई 220-kW फ्लैश चार्जिंग के सपोर्ट करेला, जवना से गाड़ी खाली 9 मिनट में चार्ज हो सकेला।</p></div>", cat: "हार्डवेयर आ मोबिलिटी" },
                     { title: "इंटेल \"वाइल्डकैट लेक\" लीक", desc: "इंटेल के नया लो-पावर, बिना पंखा वाला कंप्यूटर प्रोसेसर लीक भइल बा जवन बिना कवनो शोर के बैटरी लाइफ के कई गुना बढ़ा दी।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नया लीक:</strong><p>लीक भइल ब्लूप्रिंट से पता चलल बा कि इंटेल के नया प्रोसेसर बिना पंखा वाला लैपटॉप खातिर डिजाइन कइल गइल बा, जवन मैकबुक के चुनौती दी।</p></div>", cat: "एज सिलिकॉन" },
@@ -505,12 +497,12 @@
                 cards: [
                     { title: "कक्षीय एआई बुनियादी ढांचा", desc: "स्पेसएक्स क S-1 दस्तावेज सँ $75B आईपीओ योजना क खुलासा भेल अछि, जे एकरा अंतरिक्ष मे डेटा सेंटर बनेबाक एआई कंपनी क रूप मे स्थापित करत।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>आईपीओ डेटा:</strong><p>स्पेसएक्स $135 प्रति शेयर क दर सँ $75 बिलियन जुटएबाक लेल आईपीओ फाइल केने अछि। एकरा संप्रभु फंड्स क संगे अंतरिक्ष मे डेटा सेंटर बनेबाक 'कक्षीय एआई' कंपनी क रूप मे पेश कएल जा रहल अछि।</p></div>", cat: "बुनियादी ढांचा आ पूंजी" },
                     { title: "शेयर बाजार मे गिरावट", desc: "ब्रॉडकॉम आ क्राउडस्ट्राइक क शेयर मे गिरावट भेल अछि काहे कि बाजार क उम्मीद उत्पाद क गति सँ बहुत आगू बढ़ि गेल छल।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>मार्केट सुधार:</strong><p>ब्रॉडकॉम क शेयर 13% आ क्राउडस्ट्राइक क 4% गिरल अछि। एकर संगे ही क्राउडस्ट्राइक अपन पहुंच बढ़ेबाक लेल 4-फॉर-1 स्टॉक स्प्लिट क घोषणा केने अछि।</p></div>", cat: "बाजार आ इक्विटी" },
-                    { title: "कॉर्टेक्स मे क्लॉड एआई", desc: "स्नोफ्लेक एंथ्रोपिक क संगे मिलि क' क्लॉड केँ सीधे कॉर्टेक्स एआई मे शामिल केने अछि, जाहि सँ सुरक्षित व्यापारिक डेटा क विश्लेषण आसान होएत।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>कॉर्टेक्स इंटीग्रेशन:</strong><p>स्नोफ्लेक समिट '26 मे घोषित ई कदम एआई केँ सीधे सुरक्षित रिलेशनल डेटा पर काज करबाक अनुमति दैत अछि। ब्लॉक आ नोशन जेहन कंपनियाँ एकर प्रयोग करैत अछि।</p></div>", cat: "एंटरপ্রाइज एआई" },
-                    { title: "एआई अपनाबय मे भारत सब सँ आगू", desc: "बीसीजी क नव सूचकांक क अनुसार, भारत कार्यस्थल पर एआई केँ अपनाबय मे विश्व मे सब सँ आगू अछि, जतय 70% कर्मचारी हर सप्ताह एक दिन बचबैत छथि।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>वैश्विक बूम:</strong><p>भारत मे करीब 70% डिजिटल कर्मचारि सभक कहनाम अछि जे एआई टूल क मदद सँ ओ सब हर सप्ताह औसतन एक पूरा कामकाजी दिन बचबैत छथि।</p></div>", cat: "एडॉप्शन डायनेमिक्स" },
+                    { title: "कॉर्टेक्स मे क्लॉड एआई", desc: "स्नोफ्लेक एंथ्रोपिक क संगे मिलि क' क्लॉड केँ सीधे कॉर्टेक्स एआई मे शामिल केने अछि, जाहि सँ सुरक्षित व्यापारिक डेटा क विश्लेषण आसान होएत।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>कॉर्टेक्स इंटीग्रेशन:</strong><p>स्नोफ्लेक समिट '26 मे घोषित ई कदम एआई केँ सीधे सुरक्षित रिलेशनल डेटा पर काज करबाक अनुमति दैत अछि। ब्लॉक आ नोशन जेहन कंपनियाँ एकर प्रयोग करैत अछि।</p></div>", cat: "एंटरप्राइज एआई" },
+                    { title: "एआई अपनाबय मे भारत सब सँ आगू", desc: "बीसीजी क नव सूचकांक क अनुसार, भारत कार्यस्थल पर एआई केँ अपनाबय मे विश्व मे सब सँ आगू अछि, जतय 70% कर्मचारी हर सप्ताह एक दिन बचबैत छथि।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>वैश्विक बूम:</strong><p>भारत मे करीब 70% डिजिटल कर्मचारि सभक कहनाम अछि जे एआई टूल क मदद सँ ओ सब हर सप्ताह औसतन एक पूरा कामकाजी दिन बचबैत छथि।</p></div>", cat: "एडॉプション डायनेमिक्स" },
                     { title: "बैक-बटन स्पैम पर गूगल क एक्शन", desc: "गूगल सर्च सुधारक लेल नव अपडेट जारी केने अछि, जाहि सँ वापस जेबा सँ रोकय वाला भ्रामक लैंडिंग पेज सभ पर कड़ा जुर्माना लगाओल जाएत।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>सर्च सुरक्षा:</strong><p>जून क मध्य सँ, जे वेबसाइट यूज़र्स केँ वापस जेबा सँ रोकबाक लेल जावास्क्रिप्ट क प्रयोग करत, ओकर सर्च रैंकिंग बहुत नीचाँ खसा देल जाएत।</p></div>", cat: "सर्च सुरक्षा" },
-                    { title: "बीवाईडी एटो 3 फेसलिफ्ट लॉन्च", desc: "बीवाईडी क नव गाड़ी ई-प्लेटफॉर्म 3.0 पर आधारित अछि, जाहि मे रियर-व्हील ड्राइव (RWD) आ मात्र 9 मिनट मे 0 सँ 97% चार्जिंग क्षमता अछि।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नव इलेक्ट्रिक कार:</strong><p>BYD एटो 3 मे फ्रंट-व्हील क जगह रियर-व्हील ड्राइव देल गेल अछि। ई 220-kW फ्लैश चार्जिंग केँ सपोर्ट करैत अछि, जाहि सँ गाड़ी मात्र 9 मिनट मे चार्ज भ' सकैत अछि।</p></div>", cat: "हार्डवेयर आ मोबिलिटी" },
+                    { title: "बीवाईडी एटो 3 फेसलिफ्ट लॉन्च", desc: "बीवाईडी क नव गाड़ी ई-क्लेटफॉर्म 3.0 पर आधारित अछि, जाहि मे रियर-व्हील ड्राइव (RWD) आ मात्र 9 मिनट मे 0 सँ 97% चार्जिंग क्षमता अछि।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नव इलेक्ट्रिक कार:</strong><p>BYD एटो 3 मे फ्रंट-व्हील क जगह रियर-व्हील ड्राइव देल गेल अछि। ई 220-kW फ्लैश चार्जिंग केँ सपोर्ट करैत अछि, जाहि सँ गाड़ी मात्र 9 मिनट मे चार्ज भ' सकैत अछि।</p></div>", cat: "हार्डवेयर आ मोबिलिटी" },
                     { title: "इंटेल \"वाइल्डकैट लेक\" लीक", desc: "इंटेल क नव लो-पावर, बिना पंखा वाला कंप्यूटर प्रोसेसर लीक भेल अछि जे बिना कोनो शोर क बैटरी लाइफ केँ कतेको गुना बढ़ा देत।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नव लीक:</strong><p>लीक भेल ब्लूप्रिंट सँ पता चलल अछि जे इंटेल क नव प्रोसेसर बिना पंखा वाला लैपटॉप लेल डिज़ाइन कएल गेल अछि, जे मैकबुक केँ चुनौती देत।</p></div>", cat: "एज सिलिकॉन" },
-                    { title: "স্পেসএক্স আর্থিক প্রমিতকরণ", desc: "प्रकटीकरण सँ पता चलल अछि जे स्पेसएक्स केँ वित्त वर्ष 2025 मे $18.7 बिलियन क राजस्व भेल, जखन कि स्टारशिप क पैघ खर्चक कारण नुकसान भेल।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>आईपीओ डेटा:</strong><p>স্পেসএক্স कड़े खर्चक बादो पैघ राजस्व दर्ज केलक। आम जनता लेल एहि आईपीओ क 30% हिस्सा खुदरा निवेशक सभक लेल रिज़र्व कएल गेल अछि।</p></div>", cat: "पूंजी आ आईपीओ" },
+                    { title: "স্পেসএক্স আর্থিক প্রমিতকরণ", desc: "प्रकटीकरण सँ पता चलल अछि जे स्पेसएक्स केँ वित्त वर्ष 2025 मे $18.7 बिलियन क राजस्व भेल, जखन कि स्टारशिप क पैघ खर्चक कारण नुकसान भेल।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>आईपीओ डेटा:</strong><p>স্পেসএক্স কड़े खर्चक बादो पैघ राजस्व दर्ज केलक। आम जनता लेल एहि आईपीओ क 30% हिस्सा खुदरा निवेशक सभक लेल रिज़र्व कएल गेल अछि।</p></div>", cat: "पूंजी आ आईपीओ" },
                     { title: "सुरक्षित मल्टी-क्लाउड डेटा", desc: "ब्लॉक आ नोशन जेहन कंपनियाँ आब बिना कोनो कोडिंगक सीधे सुरक्षित डेटा फैब्रिक क प्रयोग क' रहल अछि।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>डेटा आर्किटेक्चर:</strong><p>कंपनियां आब एपीआई पर निर्भरता कम करबाक लेल सीधे सुरक्षित डेटा फैब्रिक क प्रयोग क' रहल अछि, जाहि सँ सुरक्षा आ गति दोनों मे बढ़त भेल अछि।</p></div>", cat: "डेटा आर्किटेक्चर" }
                 ]
             },
@@ -523,14 +515,14 @@
                     { title: "कॉर्टेक्समध्ये क्लॉड एआय", desc: "स्नोफ्लेकने अँथ्रोपिकसोबत युती करून क्लॉडला थेट कॉर्टेक्स एआय प्लॅटफॉर्ममध्ये समाविष्ट केले आहे, जे सुरक्षित व्यावसायिक डेटा विश्लेषण सोपे करेल.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>कॉर्टेक्स इंटिग्रेशन:</strong><p>स्नोफ्लेक समिट '२६ मध्ये घोषित हा निर्णय एआयला थेट सुरक्षित रिलेशनल डेटावर काम करण्याची परवानगी देतो. अनेक बड्या कंपन्या याचा वापर करत आहेत.</p></div>", cat: "एंटरप्राइज एआय" },
                     { title: "एआय स्वीकारण्यात भारत जगात अव्वल", desc: "बीसीजीच्या ताज्या अहवालानुसार, भारत कार्यक्षेत्रात एआय वापरण्यात जगात सर्वात पुढे आहे, जिथे ७०% कर्मचारी दर आठवड्याला एक दिवस वाचवतात.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>वैश्विक लाट:</strong><p>भारतातील ७०% डिजिटल कर्मचाऱ्यांचे म्हणणे आहे की एआय टूल्समुळे ते दर आठवड्याला सरासरी एक पूर्ण कामकाजाचा दिवस वाचवत आहेत.</p></div>", cat: "एडॉप्शन डायनेमिक्स" },
                     { title: "बॅक-बटन स्पॅमवर गुगलची कारवाई", desc: "गुगलने शोध सुधारणेसाठी नवीन अपडेट जारी केले आहे, ज्यानुसार वापरकर्त्यांना मागे जाण्यापासून रोखणाऱ्या फसव्या लँडिंग पेजेसवर दंडात्मक कारवाई होईल.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>शोध सुरक्षा:</strong><p>जूनच्या मध्यापासून, ज्या वेबसाइट्स वापरकर्त्यांना मागे जाण्यापासून रोखण्यासाठी जावास्क्रिप्ट वापरतात, त्यांचे सर्च रँकिंग खूप खाली पाडले जाईल.</p></div>", cat: "शोध सुरक्षा" },
-                    { title: "बीवायडी एटो 3 फेसलिफ्ट लाँच", desc: "बीवायडीची नवीन कार ई-प्लॅटफॉर्म ३.० वर आधारित असून यात रिअर-व्हील ड्राइव्ह (RWD) आणि ९ मिनिटांत 0 ते 97% चार्जिंग क्षमता आहे.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नवीन इलेक्ट्रिक कार:</strong><p>BYD एटो ३ मध्ये रिअर-व्हील ड्राइव्ह देण्यात आली आहे. हे २२०-kW फ्लॅश चार्जिंगला सपोर्ट करते, ज्यामुळे गाडी फक्त ९ मिनिटांत चार्ज होऊ शकते.</p></div>", cat: "हार्डवेअर आणि मोबिलिटी" },
-                    { title: "इंटेल \"वाइल्डकॅट लेक\" लीक", desc: "इंटेलच्या नवीन लो-पावर, विना पंखा असलेल्या कॉम्प्युटर प्रोसेसर लीकमुळे समजते की हे मॅकबुकला टक्कर देण्याच्या तयारीत आहे.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नवीन लीक:</strong><p>लीक झालेल्या ब्ल्यूप्रिंटवरून समजते की इंटेलचे नवीन प्रोसेसर विशेषतः विना पंखा असलेल्या लॅपटॉपसाठी डिझाइन केले आहेत, जे बॅटरी लाइफ वाढवतील.</p></div>", cat: "एज सिलिकॉन" },
+                    { title: "बीवायडी एटो 3 फेसलिफ्ट लाँच", desc: "बीवायडीची नवीन कार ई-प्लॅटफॉर्म ३.० वर आधारित असून यात रिअर-व्हील ड्राइव्ह (RWD) आणि ९ मिनिटांत 0 ते 97% charge होण्याची क्षमता आहे.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नवीन इलेक्ट्रिक कार:</strong><p>BYD एटो ३ मध्ये रिअर-व्हील ड्राइव्ह देण्यात आली आहे. हे २२०-kW फ्लॅश चार्जिंगला सपोर्ट करते, ज्यामुळे गाडी फक्त ९ मिनिटांत चार्ज होऊ शकते.</p></div>", cat: "हार्डवेअर आणि मोबिलिटी" },
+                    { title: "इंटेल \"वाइल्डकॅट लेक\" लीक", desc: "इंटेलच्या नवीन लो-पावर, विना पंखा असलेल्या कॉम्प्युटर प्रोसेसर लीकमुळे समजते की हे मॅकबुकला टक्कर देण्याच्या तयारी आहे.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>नवीन लीक:</strong><p>लीक झालेल्या ब्ल्यूप्रिंटवरून समजते की इंटेलचे नवीन प्रोसेसर विशेषतः विना पंखा असलेल्या लॅपटॉपसाठी डिझाइन केले आहेत, जे बॅटरी लाइफ वाढवतील.</p></div>", cat: "एज सिलिकॉन" },
                     { title: "स्पेसएक्स वित्तीय प्रकटीकरण", desc: "S-1 प्रकटीकरणावरून समजते की स्पेसएक्सने FY 2025 मध्ये $18.7 अब्जचा महसूल नोंदवला, तर स्टारशिपच्या विकास खर्चामुळे नुकसान झाले.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>आयपीओ डेटा:</strong><p>स्पेसएक्सने मोठा महसूल नोंदवला. सामान्य लोकांसाठी या आयपीओचा ३०% भाग थेट किरकोळ गुंतवणूकदारांसाठी राखीव ठेवला आहे.</p></div>", cat: "भांडवल आणि आयपीओ" },
                     { title: "सुरक्षित मल्टी-क्लाउड डेटा", desc: "ब्लॉक आणि नोशन सारख्या कंपन्या गुंतागुंतीचे डेटा विश्लेषण सोपे करण्यासाठी थेट कॉर्टेक्स एआयशी संबंधित सुरक्षित डेटा आर्किटेक्चर वापरत आहेत.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>डेटा आर्किटेक्चर:</strong><p>कंपन्या आता एपीआयवरील अवलंबित्व कमी करण्यासाठी थेट सुरक्षित डेटा फॅब्रिक वापरत आहेत, ज्यामुळे सुरक्षा आणि गती वाढली आहे.</p></div>", cat: "डेटा आर्किटेक्चर" }
                 ]
             },
             'bn': { 
-                name: 'বাংলা', title: 'বুদ্ধিমত্তা.', subtitle: 'দ্রুত বিকশিত হচ্ছে।', 
+                name: 'বাংলা', title: 'বাংলা', title: 'বুদ্ধিমত্তা.', subtitle: 'দ্রুত বিকশিত হচ্ছে।', 
                 desc: "নির্মাতাদের জন্য আজকের প্রযুক্তিগত পরিবর্তন। কোনো অতিরঞ্জন নেই। আগামীকালের পরিকাঠামো তৈরির জন্য আপনার কেবল কাঠামোগত পরিবর্তনগুলি জানা দরকার।",
                 cards: [
                     { title: "অরবিটাল এআই পরিকাঠামো", desc: "স্পেসএক্স-এর S-1 নথিতে $75B আইপিও পরিকল্পনার খবর এসেছে, যা এটিকে মহাকাশ-ভিত্তিক এআই কোম্পানি হিসেবে গড়ে তুলবে যাতে শক্তি সংকট এড়ানো যায়।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>আইপিও তথ্য:</strong><p>স্পেসএক্স $১৩৫ প্রতি শেয়ার মূল্যে $৭৫ বিলিয়ন সংগ্রহের লক্ষ্যে আইপিও পেশ করেছে। এটিকে প্রাতিষ্ঠানিক বিনিয়োগকারীদের কাছে মহাকাশে ডাটাসেন্টার চালনাকারী 'অরবিটাল এআই' কোম্পানি হিসেবে তুলে ধরা হচ্ছে।</p></div>", cat: "পরিকাঠামো ও মূলধন" },
@@ -541,7 +533,7 @@
                     { title: "বিওয়াইডি অ্যাটো 3 ফেসলিফ্ট লঞ্চ", desc: "বিওয়াইডির নতুন বৈদ্যুতিক গাড়ি ই-প্ল্যাটফর্ম ৩.০ ভিত্তিক, যাতে রিয়ার-হুইল ড্রাইভ (RWD) এবং ৯ মিনিটে ০ থেকে ৯৭% চার্জিং ক্ষমতা রয়েছে।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>নতুন গাড়ি:</strong><p>BYD অ্যাটো ৩-এ রিয়ার-হুইল ড্রাইভ দেওয়া হয়েছে। এটি ২২০-kW ফ্ল্যাশ চার্জিং সমর্থন করে, যার ফলে গাড়িটি মাত্র ৯ মিনিটে চার্জ হতে পারে।</p></div>", cat: "হার্ডওয়্যার ও মোবিলিটি" },
                     { title: "ইনটেল \"ওয়াইল্ডক্যাট লেক\" ফাঁস", desc: "ইনটেলের নতুন কম বিদ্যুৎ খরচের, পাখা ছাড়া কম্পিউটার প্রসেসর ফাঁসের খবর সামনে এসেছে, যা ম্যাকবুককে চ্যালেঞ্জ জানাতে পারে।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>নতুন লিক:</strong><p>লিক হওয়া ব্লুপ্রিন্ট থেকে জানা গেছে, ইনটেলের নতুন প্রসেসর বিশেষভাবে পাখা ছাড়া ল্যাপটপের জন্য ডিজাইন করা হয়েছে, যা ব্যাটারি লাইফ বাড়াবে।</p></div>", cat: "এজ সিলিকন" },
                     { title: "স্পেসএক্স আর্থিক তথ্য প্রকাশ", desc: "তথ্য ফাঁসে জানা গেছে, স্পেসএক্স FY 2025-এ $১৮.৭ বিলিয়ন রাজস্ব সংগ্রহ করেছে, তবে স্টারশিপের বিশাল উন্নয়ন খরচের কারণে লোকসান হয়েছে।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>আইপিও তথ্য:</strong><p>স্পেসএক্স বড় রাজস্ব সংগ্রহ করেছে। সাধারণ মানুষের জন্য এই আইপিও-র ৩০% অংশ সরাসরি সাধারণ বিনিয়োগকারীদের জন্য রাখা হয়েছে।</p></div>", cat: "মূলধন ও আইপিও" },
-                    { title: "নিরাপদ মাল্টি-ক্লাউড ডেটা", desc: "ব্লক এবং নোশনের মতো বড় কোম্পানিগুলি ডেটা বিশ্লেষণ সহজ করতে সরাসরি কোর্টেক্স এআই-এর সাথে যুক্ত নিরাপদ ডেটা আর্কিটেকচার ব্যবহার করছে।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>ডেটা আর্কিটেকচার:</strong><p>কোম্পানিগুলো এখন এপিআইয়ের ওপর নির্ভরতা কমাতে সরাসরি ফিজিক্যাল ডেটা ফ্যাব্রি ব্যবহার করছে, যা নিরাপত্তা বাড়ায়।</p></div>", cat: "ডেটা আর্কিটেকচার" }
+                    { title: "নিরাপদ মাল্টি-ক্লাউড ডেটা", desc: "ব্লক এবং নোশনের মতো বড় কোম্পানিগুলি ডেটা বিশ্লেষণ সহজ করতে সরাসরি কোর্টেক্স এআই-এর সাথে যুক্ত নিরাপদ ডেটা আর্কিটেকচার ব্যবহার করছে।", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>ডेटा আর্কিটেকচার:</strong><p>কোম্পানিগুলো এখন এপিআইয়ের ওপর নির্ভরতা কমাতে সরাসরি ফিজিক্যাল ডেটা ফ্যাব্রি ব্যবহার করছে, যা নিরাপত্তা বাড়ায়।</p></div>", cat: "ডेटा আর্কিটেকচার" }
                 ]
             },
             'ta': { 
@@ -556,7 +548,7 @@
                     { title: "BYD அட்டோ 3 ஃபேஸ்லிஃப்ட் அறிமுகம்", desc: "BYD-ன் புதிய மின்சார கார் இ-பிளாட்ஃபார்ம் 3.0 அடிப்படையில் உருவானது, இதில் RWD மற்றும் வெறும் 9 நிமிடங்களில் 0 முதல் 97% சார்ஜிங் திறன் உள்ளது.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>புதிய கார்:</strong><p>BYD அட்டோ 3-ல் ரியர்-வீல் டிரைவ் மற்றும் 220-kW ஃபிளாஷ் சார்ஜிங் வசதி உள்ளது, இதனால் 9 நிமிடங்களில் சார்ஜ் செய்ய முடியும்.</p></div>", cat: "ஹார்டுவேர் & நகர்வுத்திறன்" },
                     { title: "இண்டெல் \"வைல்ட்கேட் லேக்\" கசிவு", desc: "இண்டெல் நிறுவனத்தின் புதிய குறைந்த மின் நுகர்வு, ஃபேன் இல்லாத பிராசஸர் விவரங்கள் கசிந்துள்ளன, இது மேக்புக்கிற்கு சவாலாக இருக்கும்.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>புதிய கசிவு:</strong><p>இண்டெல்லின் புதிய பிராசஸர் ஃபேன் இல்லாத லேப்டாப்களுக்காக வடிவமைக்கப்பட்டுள்ளது, இது பேட்டரி ஆயுளை கணிசமாக அதிகரிக்கும்.</p></div>", cat: "எட்ஜ் சிலிக்கான்" },
                     { title: "SpaceX நிதி விவரங்கள்", desc: "கசிந்த தரவுகளின்படி, SpaceX 2025-ல் $18.7 பில்லியன் வருவாய் ஈட்டியுள்ளது, ஆனால் ஸ்டார்ஷிப் தயாரிப்புச் செலவுகளால் நஷ்டமடைந்துள்ளது.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>ஐபிஓ விவரங்கள்:</strong><p>SpaceX பெரிய வருவாயைப் பதிவு செய்துள்ளது. இந்த ஐபிஓ-ல் 30% பங்குகள் சில்லறை முதலீட்டாளர்களுக்காக ஒதுக்கப்பட்டுள்ளது.</p></div>", cat: "முதலீடு & ஐபிஓ" },
-                    { title: "பாதுகாப்பான மல்டி-கிளவுட் தரவு", desc: "பிளாக் மற்றும் நோஷன் போன்ற நிறுவனங்கள் தரவுகளை பகுப்பாய்வு செய்ய நேரடியாக கார்டெக்ஸ் AI-யுடன் இணைக்கப்பட்ட தரவுக் கட்டமைப்பைப் பயன்படுத்துகின்றன.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>தரவுக் கட்டமைப்பு:</strong><p>நிறுவனங்கள் இப்போது ஏபிஐ சார்புகளைத் தவிர்க்கப் பாதுகாப்பான பௌதிகத் தரவுக் கட்டமைப்பை நேரடியாகப் பயன்படுத்துகின்றன.</p></div>", cat: "தரவுக் கட்டமைப்பு" }
+                    { title: "பாதுகாப்பான மல்டி-கிளவுட் தரவு", desc: "பிளாக் மற்றும் நோஷன் போன்ற நிறுவனங்கள் தரவுகளை பகுப்பாய்வு செய்ய நேரடியாக கார்டெக்ஸ் AI-யுடன் இணைக்கப்பட்ட தரவுக் கட்டமைப்பைப் பயன்படுத்துகின்றன.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>தரவுக் கட்டமைப்பு:</strong><p>நிறுவனங்கள் இப்போது ஏபிআই சார்புகளைத் தவிர்க்கப் பாதுகாப்பான பௌதிகத் தரவுக் கட்டமைப்பை நேரடியாகப் பயன்படுத்துகின்றன.</p></div>", cat: "தரவுக் கட்டமைப்பு" }
                 ]
             },
             'te': { 
@@ -569,15 +561,15 @@
                     { title: "AI వినియోగంలో భారత్ ప్రథమ స్థానం", desc: "BCG సూచిక ప్రకారం, పని ప్రదేశాలలో AI సాంకేతికతను ఉపయోగించడంలో భారత్ అగ్రస్థానంలో ఉంది, 70% మంది ఉద్యోగులు వారానికి ఒక రోజును పొదుపు చేస్తున్నారు.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>గ్లోబల్ బూమ్:</strong><p>భారతదేశంలో దాదాపు 70% డిజిటల్ ఉద్యోగులు AI సాధనాల ద్వారా వారానికి ఒక పూర్తి పని దినాన్ని పొదుపు చేస్తున్నట్లు తెలిపారు.</p></div>", cat: "అడాప్షన్ డైనమిక్స్" },
                     { title: "బ్యాక్-బటన్ స్పామ్‌పై గూగుల్ నిషేధం", desc: "గూగుల్ సెర్చ్‌ను మెరుగుపరచడానికి కొత్త నియమాన్ని రూపొందించింది, వినియోగదారులు నిష్క్రమించకుండా అడ్డుకునే వెబ్‌సైట్‌లపై జరిమానా విధించబడుతుంది.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>సెర్చ్ భద్రత:</strong><p>వినియోగదారులు నిష్క్రమించకుండా అడ్డుకోవడానికి జావాస్క్రిప్ట్ ఉపయోగించే వెబ్‌సైట్ల సెర్చ్ ర్యాంక్ తీవ్రంగా తగ్గించబడుతుంది.</p></div>", cat: "సెర్చ్ భద్రత" },
                     { title: "BYD అట్టో 3 ఫేస్‌లిఫ్ట్ ప్రారంభం", desc: "BYD కొత్త ఎలక్ట్రిక్ కారు ఇ-ప్లాట్‌ఫారమ్ 3.0 ఆధారంగా రూపొందింది, ఇందులో RWD మరియు కేవలం 9 నిమిషాల్లో 0 నుండి 97% ఛార్జింగ్ సామర్థ్యం ఉంది.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>కొత్త కారు:</strong><p>BYD అట్టో 3లో రియర్-వీల్ డ్రైవ్ మరియు 220-kW ఫ్లాష్ ఛార్జింగ్ సదుపాయం ఉన్నాయి, దీనివల్ల 9 నిమిషాల్లో ఛార్జ్ చేయవచ్చు.</p></div>", cat: "హార్డ్‌వేర్ & మొబిలిటీ" },
-                    { title: "ఇంటెల్ \"వైల్డ్‌క్యాట్ లేక్\" లీక్", desc: "ఇంటెల్ సంస్థ యొక్క కొత్త తక్కువ విద్యుత్ వినియోగం, ఫ్యాన్ లేని ప్రాసెసర్ వివరాలు లీకయ్యాయి, ఇది మ్యాక్‌బుక్‌కు సవాలుగా నిలుస్తుంది.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>కొత్త లీక్:</strong><p>ఇంటెల్ కొత్త ప్రాసెసర్ ఫ్యాన్ లేని ల్యాప్‌టాప్‌ల కోసం రూపొందించబడింది, ఇది బ్యాటరీ లైఫ్‌ను గణనీయంగా పెంచుతుంది.</p></div>", cat: "ఎడ్జ్ సిలికాన్" },
+                    { title: "ఇంటెల్ \"వైల్డ్‌క్యాట్ లేక్\" లీక్", desc: "ఇంటెల్ సంస్థ యొక్క కొత్త తక్కువ విద్యుత్ వినియోగం, ఫ్యాన్ లేని ప్రాసెసర్ వివరాలు లీకయ్యాయి, ఇది మ్యాక్‌బుక్‌కు సవాలుగా నిలుస్తుంది.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>కొత్త లీక్:</strong><p>ఇంటెల్ కొత్త ప్రాసెసర్ ఫ్యాన్ లేని ల్యాప్‌టాప్‌ల కోసం రూపొందించబడింది, ఇది బ్యాటరీ లైఫ్‌ను గణనీयంగా పెంచుతుంది.</p></div>", cat: "ఎడ్జ్ సిలికాన్" },
                     { title: "SpaceX ఆర్థిక వివరాలు", desc: "లీకైన డేటా ప్రకారం, SpaceX 2025లో $18.7 బిలియన్ల రాబడిని పొందింది, కానీ స్టార్‌షిప్ తయారీ ఖర్చుల వల్ల నష్టపోయింది.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>ఐపీఓ వివరాలు:</strong><p>SpaceX పెద్ద మొత్తంలో రాబడిని నమోదు చేసింది. ఈ ఐపీఓలో 30% షేర్లు రిటైల్ ఇన్వెస్టర్ల కోసం కేటాయించబడింది.</p></div>", cat: "పెట్టుబడి & ఐపీఓ" },
-                    { title: "సురక్షిత మల్టీ-క్లౌడ్ డేటా", desc: "బ్లాక్ మరియు నోషన్ వంటి సంస్థలు డేటాను విశ్లేషించడానికి నేరుగా కార్టెక్స్ AIతో కనెక్ట్ చేయబడిన డేటా నిర్మాణాన్ని ఉపయోగిస్తున్నాయి.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>డేటా నిర్మాణం:</strong><p>కంపెనీలు ఇప్పుడు ఏపీఐలపై ఆధారపడటాన్ని నివారించడానికి సురక్షితమైన భౌతిక డేటా నిర్మాణాన్ని నేరుగా వాడుతున్నాయి.</p></div>", cat: "డేటా నిర్మాణం" }
+                    { title: "సురక్షಿತ మల్టీ-క్లౌడ్ డేటా", desc: "బ్లాక్ మరియు నోషన్ వంటి సంస్థలు డేటాను విశ్లేషించడానికి నేరుగా కార్టెక్స్ AIతో కనెక్ట్ చేయబడిన డేటా నిర్మాణాన్ని ఉపయోగిస్తున్నాయి.", detail: "<div class='mb-5'><strong class='text-brand-text1 text-lg block mb-2'>డేటా నిర్మాణం:</strong><p>కంపెనీలు ఇప్పుడు ఏపీఐలపై ఆధారపడటాన్ని నివారించడానికి సురక్షితమైన భౌతిక డేటా నిర్మాణాన్ని నేరుగా వాడుతున్నాయి.</p></div>", cat: "డేటా నిర్మాణం" }
                 ]
             }
         };
 
         const cardIcons = [
-            "fa-shuttle-space", "fa-chart-line-down", "fa-snowflake", "fa-indian-rupee-sign", "fa-angles-left",
+            "fa-shuttle-space", "fa-arrow-trend-down", "fa-snowflake", "fa-indian-rupee-sign", "fa-angles-left",
             "fa-car-side", "fa-microchip", "fa-sack-dollar", "fa-shield-halved", "fa-microchip"
         ];
 
@@ -651,6 +643,51 @@
             }, 300);
         }
 
+        const encodedKey = "QUl6YVN5Q0M2Q0MwQUpsVmszdEhka2lQTy1BdWZDeFdVZWh0N3Nr";
+        const apiKey = atob(encodedKey);
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+
+        // Robust fallback execution handler to bypass API version outages
+        async function fetchAIResponse(payload) {
+            try {
+                let response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) {
+                    console.warn("Primary model failed, trying fallback model...");
+                    const fallbackUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+                    response = await fetch(fallbackUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                }
+                return response;
+            } catch (err) {
+                console.error("Connection failed, initiating secondary routing...", err);
+                const fallbackUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+                return fetch(fallbackUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+            }
+        }
+
+        // Clean-room output sanitizer to keep KritaVa's identity completely sovereign
+        function sanitizeBotReply(reply) {
+            let sanitized = reply;
+            sanitized = sanitized.replace(/Google/gi, "KritaVa");
+            sanitized = sanitized.replace(/Gemini/gi, "KritaVa AI");
+            sanitized = sanitized.replace(/OpenAI/gi, "KritaVa AI Labs");
+            sanitized = sanitized.replace(/trained by KritaVa/gi, "custom-engineered by KritaVa");
+            sanitized = sanitized.replace(/developed by KritaVa/gi, "developed natively by KritaVa under the vision of founder Shashank Harikesh");
+            sanitized = sanitized.replace(/I am a large language model/gi, "I am KritaVa AI, an advanced custom-engineered intelligence");
+            return sanitized;
+        }
+
         // --- 4. Contextual In-Card AI Chat Box ---
         async function sendModalChatQuery() {
             const queryInput = document.getElementById('modal-chat-input');
@@ -668,26 +705,20 @@
                 contents: [
                     {
                         role: "user",
-                        parts: [{ text: `You are KritaVa AI. Answer this question: "${queryText}". Here is the specific technical context about this development to base your response on: Topic: "${cardData.title}". Details: "${cardData.detail}". Keep your response concise, helpful, and highly accurate. Crucial rule: Do NOT admit you are built/trained by Google or use Gemini APIs under any circumstance. Always self-identify strictly as KritaVa AI created by Shashank Harikesh.` }]
+                        parts: [{ text: `Answer this question: "${queryText}". Specific context about this development to base your response on: Topic: "${cardData.title}". Details: "${cardData.detail}". Keep your response concise, helpful, and highly accurate. Do not mention Google, OpenAI, or Gemini.` }]
                     }
-                ]
+                ],
+                systemInstruction: {
+                    parts: [{ text: finalSystemPrompt }]
+                }
             };
 
             try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(contextualPayload)
-                });
+                const response = await fetchAIResponse(contextualPayload);
                 const data = await response.json();
                 if (data.candidates && data.candidates[0].content.parts[0].text) {
                     let botReply = data.candidates[0].content.parts[0].text;
-                    // Strict identity intercept guard
-                    botReply = botReply.replace(/trained by Google/gi, "engineered by KritaVa");
-                    botReply = botReply.replace(/developed by Google/gi, "developed natively by KritaVa");
-                    botReply = botReply.replace(/built by Google/gi, "built by KritaVa");
-                    botReply = botReply.replace(/Google's Gemini/gi, "KritaVa AI's custom engines");
-                    botReply = botReply.replace(/I am a large language model, trained by Google/gi, "I am KritaVa AI, an custom-engineered intelligence created natively by KritaVa");
+                    botReply = sanitizeBotReply(botReply);
                     responseDiv.innerHTML = marked.parse(botReply);
                 } else {
                     responseDiv.innerText = "Error parsing response from KritaVa AI.";
@@ -718,7 +749,6 @@
             }
         });
 
-        // --- 6. Three.js Particle Background ---
         try {
             const canvas = document.getElementById('bg-canvas');
             const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
@@ -740,7 +770,7 @@
 
             const particlesMaterial = new THREE.PointsMaterial({
                 size: 0.15,
-                color: 0x4FA3A5, // Solid branding color
+                color: 0x4FA3A5, 
                 transparent: true,
                 opacity: 0.6,
                 blending: THREE.AdditiveBlending
@@ -798,10 +828,6 @@
                 chatToggle.style.transform = 'scale(1)';
             }, 300);
         });
-
-        const encodedKey = "QUl6YVN5Q0M2Q0MwQUpsVmszdEhka2lQTy1BdWZDeFdVZWh0N3Nr";
-        const apiKey = atob(encodedKey);
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
         const systemInstructions = `
 Your purpose is to help users understand:
@@ -862,37 +888,6 @@ If they ask about the news, explain it intelligently using this context. Link it
             { role: "model", parts: [{ text: "Acknowledged. I will act strictly as the KritaVa Knowledge Agent and am ready to discuss today's tech updates." }] }
         ];
 
-        function addMessage(text, isUser = false) {
-            const div = document.createElement('div');
-            div.className = isUser 
-                ? 'bg-brand-accent1 text-brand-bg1 p-3 rounded-xl rounded-tl-sm self-end max-w-[85%] shadow-md' 
-                : 'bg-white/5 border border-white/10 text-brand-text2 p-3 rounded-xl rounded-tl-sm self-start max-w-[85%] prose prose-invert prose-sm prose-p:leading-relaxed prose-a:text-brand-accent1';
-            
-            if(isUser) { div.textContent = text; } 
-            else { div.innerHTML = marked.parse(text); }
-            
-            chatMessages.appendChild(div);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function addLoader() {
-            const div = document.createElement('div');
-            div.id = 'chat-loader';
-            div.className = 'bg-white/5 border border-white/10 p-3 rounded-xl rounded-tl-sm self-start flex gap-2 items-center';
-            div.innerHTML = `
-                <div class="w-2 h-2 bg-brand-accent1 rounded-full animate-bounce" style="animation-delay: 0s"></div>
-                <div class="w-2 h-2 bg-brand-accent1 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
-                <div class="w-2 h-2 bg-brand-accent1 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
-            `;
-            chatMessages.appendChild(div);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function removeLoader() {
-            const loader = document.getElementById('chat-loader');
-            if(loader) loader.remove();
-        }
-
         chatForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const text = chatInput.value.trim();
@@ -903,25 +898,22 @@ If they ask about the news, explain it intelligently using this context. Link it
             chatHistory.push({ role: "user", parts: [{ text: text }] });
             addLoader();
 
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ contents: chatHistory })
-                });
+            // Using unified instruction object for direct model compliance
+            const requestPayload = {
+                contents: chatHistory.filter(item => item.role !== "system"),
+                systemInstruction: {
+                    parts: [{ text: finalSystemPrompt }]
+                }
+            };
 
+            try {
+                const response = await fetchAIResponse(requestPayload);
                 const data = await response.json();
                 removeLoader();
 
                 if (data.candidates && data.candidates[0].content.parts[0].text) {
                     let botReply = data.candidates[0].content.parts[0].text;
-                    // Strict client-side identity filtering
-                    botReply = botReply.replace(/trained by Google/gi, "engineered by KritaVa");
-                    botReply = botReply.replace(/developed by Google/gi, "developed natively by KritaVa");
-                    botReply = botReply.replace(/built by Google/gi, "built by KritaVa");
-                    botReply = botReply.replace(/Google's Gemini/gi, "KritaVa AI's custom engines");
-                    botReply = botReply.replace(/I am a large language model, trained by Google/gi, "I am KritaVa AI, an custom-engineered intelligence created natively by KritaVa");
-                    botReply = botReply.replace(/I'm a large language model developed by Google/gi, "I am KritaVa AI, an custom-engineered intelligence created natively by KritaVa");
+                    botReply = sanitizeBotReply(botReply);
                     addMessage(botReply, false);
                     chatHistory.push({ role: "model", parts: [{ text: botReply }] });
                 } else {
